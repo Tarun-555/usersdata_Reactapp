@@ -28,7 +28,7 @@ class Homepage extends Component{
                         //console.log("ud",userDetails);
       this.props.history.push({
          pathname:"/userdata",
-         state:{user:userDetails[0]}
+         state:{user:userDetails[0],users:this.state.users}
       })
    }
 

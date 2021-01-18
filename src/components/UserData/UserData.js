@@ -12,7 +12,7 @@ class UserData extends Component {
          renderingField:null,
          showModal:false
      }
-     // console.log("userdata",props.location.state.user);
+     console.log("userdata",props.location.state);
     }
 
     fieldClickHandler=(e)=>{
@@ -71,25 +71,27 @@ class UserData extends Component {
                   profileClicked={this.profileClickHandler}/>
                 <div style={{display:'flex',
                      justifyContent:'center',
-                     alignItems:'center'}}>
+                     alignItems:'center',
+                     height:'75vh'}}>
                       <ComingSoon />
                 </div>
              </div>
           );
 
 
-          let profileModal = null;
+         let profileModal = null;
            profileModal = (
                  <div className={classes.Modal}>
                     <img 
                       className={classes.ModalImg}
                       src={this.state.user.profilepicture} alt="img" />
-                    <p style={{margin:'2px',borderBottom:'1px solid #ccc'}}>{this.state.user.name}</p>
-                    <p style={{color:'#948e7c',borderBottom:'1px solid #ccc'}}>{this.state.user.email}</p>
+                    <p style={{margin:'0px'}}>{this.state.user.name}</p>
+                    <p style={{color:'#948e7c',borderBottom:'1px solid #ccc',fontSize:'small'}}>
+                        {this.state.user.email}</p>
                     <button 
                       className={classes.Button}
                       onClick={this.signOutHandler}>
-                          Sign Out
+                          Sign out
                     </button>
                  </div>
            )
@@ -116,7 +118,7 @@ class UserData extends Component {
                        onClick={this.ModalDrophandler}
                        className={classes.backdrop}></div>
                 </div>
-            </div>
+            </div>     
         )
     }
 }
