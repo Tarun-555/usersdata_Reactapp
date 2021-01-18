@@ -43,6 +43,15 @@
   width: 40px;
 }
 
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 10%;
+  background:#ccc;
+}
+
 
 @media(max-width: 600px){
   .Card{
