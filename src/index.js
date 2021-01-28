@@ -2,11 +2,24 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
+import {createStore,applyMiddleware,compose} from "redux";
+import createSagaMiddleware from "redux-saga";
+import {Provider} from "react-redux";
+import reducer from "./store/reducer";
+import rootSaga from "./store/saga"
+
+const sagaMiddleware = createSagaMiddleware();
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer,composeEnhancers(applyMiddleware(sagaMiddleware)))
+
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

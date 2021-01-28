@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components'
 
 function UserField(props) {
     return (
-        <p style={{display:'block',textAlign:'start',textTransform:'capitalize'}}>
+        <Field>
           <span style={{color:"#948e7c"}}>{props.field} : </span>
           <strong>{props.value}</strong>
-        </p>
+        </Field>
     )
 }
+
+const Field = styled.p`
+ display:block;
+ text-align:start;
+ text-transform:capitalize;
+`
 
 export default UserField;

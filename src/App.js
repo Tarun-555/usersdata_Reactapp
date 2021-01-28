@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import {Switch,Route} from "react-router-dom";
-import Homepage from "./components/Homepage/Homepage";
-import UserData from "./components/UserData/UserData";
+import Homepage from "./components/Homepage";
+import UserData from "./components/UserData";
 
 function App() {
   return (
