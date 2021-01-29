@@ -7,7 +7,7 @@ export default function* fetchUsers(){
         yield put({ type:'REQUEST_DATA_SUCCESS', users })
       }
       catch(error) {
-        yield put({ type: 'REQUEST_DATA_SUCCESS', error })
+        yield put({ type: 'REQUEST_DATA_FAILED', error })
       }
 }
 
