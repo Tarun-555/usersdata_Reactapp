@@ -1,10 +1,14 @@
-All you need to run this project:
+## User Dashboard
 
-1. Clone the repo or download project.
+A simple users dashboard built using react.
 
-2. Run "npm install" to install all dependencies required for project.
 
-3. I have been using google map api service in my project so it requires api key to access it services so you need to create .env file and provide it with your own api key to access its services.
 
-4. Use "npm start" to run the project.
+### All you need to run this project:
+
+  - Clone the repo or download project.
+
+  - Run "npm install" to install all dependencies required for project.
+
+  - I have used google map services to render map in this project. so, In order to make useof this map services you need api key to access it services.You can create your own api key to access its services.
 
